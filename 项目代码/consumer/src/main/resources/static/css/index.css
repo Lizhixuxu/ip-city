@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body{
+    width: 100%;
+    height: 820px;
+    cursor: default;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: block;
+    outline: none;
+    margin: 0px auto;
+    position: relative;
+    z-index: 1;
+    background-size: cover;
+    background-image: url(//12612979.s61i.faiusr.com/2/AD0I8_qBBhACGAAgvYHt2QUo8PK7nQUwgA84tAY.jpg);
+}
+div {
+    display: block;
+}
+.container {
+    width: 1180px;
+    margin-right: auto;
+    margin-left: auto;
+    *zoom: 1;
+}
+.container h3 {
+    text-align: center;
+    font-size: 30px;
+    line-height: 52px;
+    color: #FFF;
+    font-weight: 400;
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.container p{
+    display: block;
+    font-size: 14px;
+    line-height: 30px;
+    color: #999;
+    text-align: center;
+}
+.search {
+    margin-top: 32px;
+    text-align: center;
+}
+.search input {
+    animation: linear 1s;
+    width: 700px;
+    height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    padding: 15px 20px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid #FFFFFF;
+    outline: none;
+}
+.search .search-btn{
+    display: inline-block;
+    margin-left: -6px;
+    margin-bottom: 0;
+    cursor: pointer;
+    color: #FFF;
+    background-color: #108CEE;
+    width: 115px;
+    height: 32px;
+    font-size: 14px;
+    line-height: 32px;
+}
+input {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    background-color: transparent;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    font: 400 13.3333px Arial;
+}

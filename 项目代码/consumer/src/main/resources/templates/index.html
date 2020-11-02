@@ -1,0 +1,54 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title></title>
+    <meta name="description" content=""/>
+    <link href="/css/index.css" rel="stylesheet"/>
+    <style>
+    </style>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+    <script>
+        function findCityByIp() {
+            var ip = $("#ip").val();
+            // alert (ip);
+            var url = "http://localhost:9001/user/findCityByIp"+"?ip="+ip;
+            // alert(url);
+            $.ajax({
+                type:"post",
+                url:url,
+                // data: ip,
+                dataType:"text", // 这里声明收到的服务器的响应数据类型，如果是json的话，不声明也可以正常使用
+                success:function (data) {
+                    //响应成功后回调函数
+                    // alert("收到响应");
+                    console.log(data);
+                    $("#city").css("opacity","1");
+                    if(data=="") {
+                        data = "没有找到该ip对应的城市";
+                    }
+                    // $("#r").html(JSON.stringify(data)); //这里将json转为字符串显示(data其实是个object,不转换的话会显示为一片空白)
+                    $("#city").val(data);
+                },
+                error:function () {
+                    console.log("error,ip:"+ip);
+                    alert("error");
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <h3>根据ip查找城市</h3>
+    <p>包含国内国外五十万个ip地址</p>
+    <div class="search">
+        <input id="ip" type="text" name="ip" placeholder=""/>
+        <span class="search-btn" onclick="findCityByIp()">搜索</span>
+    </div>
+    <div class="search">
+        <input id="city" style="margin-right: 108px;opacity: 0" type="text" name="city" disabled="disabled" placeholder=""/>
+    </div>
+<!--    <p class="tips">没有查询到合作伙伴信息呀，请输入正确的公司全称。</p>-->
+</div>
+</body>
+</html>
